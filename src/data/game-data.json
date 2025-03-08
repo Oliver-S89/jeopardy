@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Erlkönig",
+    "questionset": [
+      {
+        "points": 100,
+        "question": "wer war das?",
+        "answer": "na da"
+      },
+      {
+        "points": 200,
+        "question": "wer war das?",
+        "answer": "na da"
+      },
+      {
+        "points": 300,
+        "question": "wer war das?",
+        "answer": "na da"
+      },
+      {
+        "points": 400,
+        "question": "wer war das?",
+        "answer": "na da"
+      },
+      {
+        "points": 500,
+        "question": "wer war das?",
+        "answer": "na da"
+      }
+    ]
+  },
+  {
+    "category": "Erlkönig 1",
+    "questionset": [
+      {
+        "points": 100,
+        "question": "wer war das jetzt?",
+        "answer": "na ich"
+      },
+      {
+        "points": 200,
+        "question": "wer war das jetzt?",
+        "answer": "na ich"
+      },
+      {
+        "points": 300,
+        "question": "wer war das jetzt?",
+        "answer": "na ich"
+      },
+      {
+        "points": 400,
+        "question": "wer war das jetzt?",
+        "answer": "na ich"
+      },
+      {
+        "points": 500,
+        "question": "wer war das jetzt?",
+        "answer": "na ich"
+      }
+    ]
+  }
+]
