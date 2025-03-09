@@ -1,11 +1,20 @@
+// @ts-ignore
 import logo from "./logo.svg";
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import { LandingPage } from "./landing";
+import { QuestionWrapper } from "./questionWrapper";
+
+// @ts-ignore
+import data from "./data/game-data.json";
+import { JeopardyBoard } from "./jeopardyBoard";
 
 function App() {
   const [hasStarted, setHasStarted] = useState(false);
+  // @ts-ignore
   const [teams, setTeams] = useState(0);
+  // @ts-ignore
+  const [selectedCategoryItem, setSelectedCategoryItem] = useState(null);
 
   useEffect(() => {
     const storedTeams = localStorage.getItem("teams");
@@ -18,6 +27,7 @@ function App() {
     console.log(number);
   };
 
+  console.log(data.gameData);
   return (
     <div className="App">
       {!hasStarted ? (
@@ -44,7 +54,18 @@ function App() {
         </>
       ) : (
         <>
-          <h1>Los gehts</h1>
+          <div>
+            <JeopardyBoard
+              gameData={data.gameData}
+              setSelectedCategoryItem={setSelectedCategoryItem}
+            />
+          </div>
+          {selectedCategoryItem && (
+            <QuestionWrapper
+              categoryItem={selectedCategoryItem}
+              setSelectedCategoryItem={setSelectedCategoryItem}
+            />
+          )}
         </>
       )}
     </div>
