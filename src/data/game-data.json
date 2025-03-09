@@ -1,62 +1,94 @@
-[
-  {
-    "category": "Erlkönig",
-    "questionset": [
-      {
-        "points": 100,
-        "question": "wer war das?",
-        "answer": "na da"
-      },
-      {
-        "points": 200,
-        "question": "wer war das?",
-        "answer": "na da"
-      },
-      {
-        "points": 300,
-        "question": "wer war das?",
-        "answer": "na da"
-      },
-      {
-        "points": 400,
-        "question": "wer war das?",
-        "answer": "na da"
-      },
-      {
-        "points": 500,
-        "question": "wer war das?",
-        "answer": "na da"
-      }
-    ]
-  },
-  {
-    "category": "Erlkönig 1",
-    "questionset": [
-      {
-        "points": 100,
-        "question": "wer war das jetzt?",
-        "answer": "na ich"
-      },
-      {
-        "points": 200,
-        "question": "wer war das jetzt?",
-        "answer": "na ich"
-      },
-      {
-        "points": 300,
-        "question": "wer war das jetzt?",
-        "answer": "na ich"
-      },
-      {
-        "points": 400,
-        "question": "wer war das jetzt?",
-        "answer": "na ich"
-      },
-      {
-        "points": 500,
-        "question": "wer war das jetzt?",
-        "answer": "na ich"
-      }
-    ]
-  }
-]
+{
+  "gameData": [
+    {
+      "category": "Erlkönig",
+      "questionset": [
+        {
+          "points": 100,
+          "question": "F1.1 wer war das?",
+          "answer": "na da"
+        },
+        {
+          "points": 200,
+          "question": "F1.2 wer war das?",
+          "answer": "na da"
+        },
+        {
+          "points": 300,
+          "question": "F1.3 wer war das?",
+          "answer": "na da"
+        },
+        {
+          "points": 400,
+          "question": "F1.4 wer war das?",
+          "answer": "na da"
+        },
+        {
+          "points": 500,
+          "question": "F1.5 wer war das?",
+          "answer": "na da"
+        }
+      ]
+    },
+    {
+      "category": "Erlkönig 1",
+      "questionset": [
+        {
+          "points": 100,
+          "question": "F2.1 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 200,
+          "question": "F2.2 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 300,
+          "question": "F2.3 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 400,
+          "question": "F2.4 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 500,
+          "question": "F2.5 wer war das jetzt?",
+          "answer": "na ich"
+        }
+      ]
+    },
+    {
+      "category": "Erlkönig 2",
+      "questionset": [
+        {
+          "points": 100,
+          "question": "F3.1 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 200,
+          "question": "F3.2 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 300,
+          "question": "F3.3 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 400,
+          "question": "F3.4 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 500,
+          "question": "F3.5 wer war das jetzt?",
+          "answer": "na ich"
+        }
+      ]
+    }
+  ]
+}
