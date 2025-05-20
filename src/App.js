@@ -10,29 +10,64 @@ import data from "./data/game-data.json";
 import { JeopardyBoard } from "./jeopardyBoard";
 
 function App() {
+  // console.log("BASE DATA", data.gameData);
   const [hasStarted, setHasStarted] = useState(false);
-  // @ts-ignore
-  const [teams, setTeams] = useState(0);
-  // @ts-ignore
+  const [teams, setTeams] = useState([]);
+  const [teamCount, setTeamCount] = useState(0);
+  const [currentTeam, setCurrentTeam] = useState(0);
+
   const [selectedCategoryItem, setSelectedCategoryItem] = useState(null);
 
+  const [prepairedData, setPrepairedData] = useState(() => {
+    return data.gameData.map((category, categoryIndex) => {
+      const questions = category.questionset.map((question, questionIndex) => {
+        return {
+          ...question,
+          ...{
+            answeredBy: null,
+            answeredCorretly: null,
+            categoryIndex: categoryIndex,
+            questionIndex: questionIndex,
+          },
+        };
+      });
+      return [...questions, { category: category.category }];
+    });
+  });
+
   useEffect(() => {
-    const storedTeams = localStorage.getItem("teams");
-    setTeams(storedTeams !== null ? Number(storedTeams) : 0);
-  }, []);
+    // console.log("PREPAIRED DATA", prepairedData);
+  }, [prepairedData]);
 
   const storeNumberOfTeams = (number) => {
+    setCurrentTeam(Math.floor(Math.random() * number) + 1);
+    setTeamCount(number);
     setTeams(number);
-    // localStorage.setItem('teams', number)
-    console.log(number);
   };
 
-  console.log(data.gameData);
+  const finishRound = (correct, questionItem) => {
+    console.log(questionItem.categoryIndex);
+    const nextTeam = currentTeam + 1 > teamCount ? 1 : currentTeam + 1;
+    const updatedPrepairedData = (prepairedData[questionItem.categoryIndex][
+      questionItem.questionIndex
+    ].answeredCorretly = correct);
+
+    console.log(
+      "#####",
+      correct,
+      questionItem.categoryIndex,
+      questionItem.questionIndex,
+      updatedPrepairedData,
+      prepairedData
+    );
+    setCurrentTeam(nextTeam);
+  };
+
   return (
     <div className="App">
       {!hasStarted ? (
         <>
-          <header className="App-header">
+          {/* <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
               Edit <code>src/App.js</code> and save to reload.
@@ -46,7 +81,7 @@ function App() {
               Learn React
             </a>
           </header>
-          <h1>Hallo Welt</h1>
+          <h1>Hallo Welt</h1> */}
           <LandingPage
             storeNumberOfTeams={storeNumberOfTeams}
             startGame={setHasStarted}
@@ -56,14 +91,16 @@ function App() {
         <>
           <div>
             <JeopardyBoard
-              gameData={data.gameData}
+              gameData={prepairedData}
               setSelectedCategoryItem={setSelectedCategoryItem}
+              currentTeam={currentTeam}
             />
           </div>
           {selectedCategoryItem && (
             <QuestionWrapper
               categoryItem={selectedCategoryItem}
               setSelectedCategoryItem={setSelectedCategoryItem}
+              finishRound={finishRound}
             />
           )}
         </>

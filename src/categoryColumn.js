@@ -2,11 +2,14 @@ import React from "react";
 import { CategoryItem } from "./categoryItem";
 
 export function CategoryColumn(props) {
-  console.log("category column", props);
+  const catItems = props?.item || [];
+  const category = catItems[catItems.length - 1];
+  const questionset = catItems.slice(0, -1);
+
+  // console.log("########", props.item, category, questionset);
   return (
     <div
       style={{
-        background: "#123456",
         minWidth: "40px",
         minHeight: "40px",
         margin: "20px",
@@ -14,14 +17,11 @@ export function CategoryColumn(props) {
         alignItems: "stretch",
       }}
     >
-      <h1>
-        {props?.item?.category
-          ? props.item.category
-          : "Kategorie nicht definiert"}
-      </h1>
-      {props?.item?.questionset.map((item) => {
+      <h1>{category ? props.item.category : "Kategorie nicht definiert"}</h1>
+      {questionset.map((item, index) => {
         return (
           <CategoryItem
+            key={category + item.question}
             categoryItem={item}
             setSelectedCategoryItem={props.setSelectedCategoryItem}
           />
