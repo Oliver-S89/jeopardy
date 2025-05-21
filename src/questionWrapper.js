@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import CountdownTimer from "./CountdownTimer";
 
 export function QuestionWrapper(props) {
   // console.log(props);
@@ -135,6 +136,24 @@ export function QuestionWrapper(props) {
             onClick={() => props.setSelectedCategoryItem(null)}
           >
             Team {props.currentTeam}
+          </div>
+          <div
+            style={{
+              position: "fixed",
+              right: "60px",
+              bottom: "60px",
+              background: "none",
+              fontSize: "1.5rem",
+              border: "none",
+              color: "white",
+              opacity: 0.8,
+            }}
+          >
+            <CountdownTimer
+              initialSeconds={45}
+              onComplete={() => alert("Zeit ist abgelaufen!")}
+              answerOpened={answerOpened}
+            />
           </div>
         </div>
       </div>
