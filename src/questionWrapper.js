@@ -24,32 +24,117 @@ export function QuestionWrapper(props) {
           left: "40px",
           right: "40px",
           bottom: "40px",
-          background: "#123321",
+          background: "#1E3A8A",
           border: "solid 2px lightgrey",
           borderRadius: "24px",
+          padding: "40px",
+          color: "white",
         }}
       >
-        <h1>
-          {props?.categoryItem
-            ? props.categoryItem.question
-            : "Keine Frage definiert"}
-        </h1>
-        {!answerOpened ? (
-          <button onClick={() => setAnswerOpened(true)}>Lösung anzeigen</button>
-        ) : (
-          <>
-            <h2>Antwort: {props?.categoryItem?.answer}</h2>
-            <button onClick={() => props.finishRound(true, questionItem)}>
-              Richtig
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+          }}
+        >
+          <h1>
+            {props?.categoryItem
+              ? props.categoryItem.question
+              : "Keine Frage definiert"}
+          </h1>
+          {!answerOpened ? (
+            <button
+              style={{
+                background: "white",
+                border: "none",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                padding: "14px 24px",
+                color: "#1E3A8A",
+                borderRadius: "24px",
+                marginTop: "40px",
+              }}
+              onClick={() => setAnswerOpened(true)}
+            >
+              Lösung anzeigen
             </button>
-            <button onClick={() => props.finishRound(false, questionItem)}>
-              Falsch
-            </button>
-            <button onClick={() => props.setSelectedCategoryItem(null)}>
-              Schließen
-            </button>
-          </>
-        )}
+          ) : (
+            <>
+              <h2>Antwort: {props?.categoryItem?.answer}</h2>
+              <div
+                style={{
+                  position: "fixed",
+                  bottom: "100px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                }}
+              >
+                <button
+                  style={{
+                    background: "white",
+                    border: "none",
+                    fontSize: "1.5rem",
+                    fontWeight: "bold",
+                    padding: "14px 24px",
+                    color: "#1E3A8A",
+                    borderRadius: "24px",
+                    marginRight: "20px",
+                  }}
+                  onClick={() => props.finishRound(true, questionItem)}
+                >
+                  Richtig
+                </button>
+                <button
+                  style={{
+                    background: "white",
+                    border: "none",
+                    fontSize: "1.5rem",
+                    fontWeight: "bold",
+                    padding: "14px 24px",
+                    color: "#1E3A8A",
+                    borderRadius: "24px",
+                  }}
+                  onClick={() => props.finishRound(false, questionItem)}
+                >
+                  Falsch
+                </button>
+              </div>
+            </>
+          )}
+          <button
+            style={{
+              position: "fixed",
+              right: "60px",
+              top: "60px",
+              background: "none",
+              fontSize: "2rem",
+              border: "none",
+              color: "white",
+              fontWeight: "bold",
+            }}
+            onClick={() => props.setSelectedCategoryItem(null)}
+          >
+            X
+          </button>
+          <div
+            style={{
+              position: "fixed",
+              left: "60px",
+              top: "60px",
+              background: "none",
+              fontSize: "1.5rem",
+              border: "none",
+              color: "white",
+              opacity: 0.5,
+            }}
+            onClick={() => props.setSelectedCategoryItem(null)}
+          >
+            Team {props.currentTeam}
+          </div>
+        </div>
       </div>
     </>
   );

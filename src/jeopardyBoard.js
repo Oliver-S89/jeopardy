@@ -25,16 +25,47 @@ export function JeopardyBoard(props) {
       <div
         style={{
           position: "fixed",
-          top: 10,
-          left: 20,
-          background: "#595959",
+          top: 0,
+          left: 0,
+          right: 0,
           padding: "20px",
           opacity: 0.7,
           fontWeight: "bold",
           color: "white",
+          display: "flex",
+          justifyContent: "space-between",
         }}
       >
-        Es ist Team {props.currentTeam ? props.currentTeam : 1} an der Reihe
+        <div
+          style={{
+            background: "#595959",
+            padding: "20px",
+            fontWeight: "bold",
+            color: "white",
+          }}
+        >
+          Es ist Team {props.currentTeam ? props.currentTeam : 1} an der Reihe
+        </div>
+        <h1 style={{ margin: 0, padding: 0, color: "white" }}>
+          School of Rock
+        </h1>
+        <div>
+          <button
+            style={{
+              padding: "20px",
+              background: "#595959",
+              border: "none",
+              fontWeight: "bold",
+              fontSize: "1.05rem",
+              borderRadius: "24px",
+              color: "white",
+              cursor: "pointer",
+            }}
+            onClick={() => props.showScoreBoard(true)}
+          >
+            Scoreboard anzeigen
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import { QuestionWrapper } from "./questionWrapper";
 // @ts-ignore
 import data from "./data/game-data.json";
 import { JeopardyBoard } from "./jeopardyBoard";
+import { Scoreboard } from "./scoreBoard";
 
 function App() {
   // console.log("BASE DATA", data.gameData);
@@ -19,6 +20,8 @@ function App() {
   const [readyToStart, setReadyToStart] = useState(false);
 
   const [selectedCategoryItem, setSelectedCategoryItem] = useState(null);
+
+  const [showScoreBoard, setShowScoreBoard] = useState(false);
 
   const [prepairedData, setPrepairedData] = useState(() => {
     return data.gameData.map((category, categoryIndex) => {
@@ -49,8 +52,8 @@ function App() {
       const resultTable = [];
       for (let i = 0; i < number; i++) {
         const teamTable = {
-          team: i,
-          point: 0,
+          team: i + 1,
+          points: 0,
           questions: [],
         };
         resultTable.push(teamTable);
@@ -67,22 +70,50 @@ function App() {
     const updatedPrepairedData = (prepairedData[questionItem.categoryIndex][
       questionItem.questionIndex
     ].answeredCorretly = correct);
+    prepairedData[questionItem.categoryIndex][
+      questionItem.questionIndex
+    ].answeredBy = currentTeam;
 
-    console.log(
-      "#####",
+    updateResults(
+      currentTeam,
+      questionItem.points,
       correct,
-      questionItem.categoryIndex,
-      questionItem.questionIndex,
-      updatedPrepairedData,
-      prepairedData
+      questionItem.question,
+      questionItem.answer
     );
+
     setCurrentTeam(nextTeam);
     setSelectedCategoryItem(null);
   };
 
+  const updateResults = (team, points, correctly, question, answer) => {
+    console.log("#####", team, points, correctly, question, answer);
+    const updateEntry = {
+      ...results[team - 1],
+      ...{
+        points: correctly
+          ? results[team - 1].points + points
+          : results[team - 1].points,
+        questions: [
+          ...results[team - 1].questions,
+          ...[{ question: question, answer: answer, points: points }],
+        ],
+      },
+    };
+
+    const copyResults = results.map((resultEntry) => {
+      if (team === resultEntry.team) {
+        return updateEntry;
+      }
+      return resultEntry;
+    });
+
+    setResults(copyResults);
+  };
+
   useEffect(() => {
-    console.log(results.length > 0);
     if (results.length > 0) {
+      console.log("RESULT TABLE", results, results.length > 0);
       setReadyToStart(true);
     }
   }, [results]);
@@ -104,6 +135,7 @@ function App() {
               gameData={prepairedData}
               setSelectedCategoryItem={setSelectedCategoryItem}
               currentTeam={currentTeam}
+              showScoreBoard={setShowScoreBoard}
             />
           </div>
           {selectedCategoryItem && (
@@ -111,7 +143,11 @@ function App() {
               categoryItem={selectedCategoryItem}
               setSelectedCategoryItem={setSelectedCategoryItem}
               finishRound={finishRound}
+              currentTeam={currentTeam}
             />
+          )}
+          {showScoreBoard && (
+            <Scoreboard showScoreBoard={setShowScoreBoard} results={results} />
           )}
         </>
       )}

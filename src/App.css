@@ -57,15 +57,16 @@
 
 .question-element.is-answered {
   opacity: 0.4;
+  cursor:initial;
 }
 
 .question-element.is-answered.correct {
-  background-color: rgb(106, 221, 106);
+  /* background-color: rgb(106, 221, 106); */
 }
 .question-element.is-answered.uncorrect {
-  background-color: rgb(204, 59, 59);
+  /* background-color: rgb(204, 59, 59); */
 }
 
 .question-element.is-answered:hover {
-  background-color: none;
+  background-color: #1E3A8A;
 }
