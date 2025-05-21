@@ -15,6 +15,8 @@ function App() {
   const [teams, setTeams] = useState([]);
   const [teamCount, setTeamCount] = useState(0);
   const [currentTeam, setCurrentTeam] = useState(0);
+  const [results, setResults] = useState([]);
+  const [readyToStart, setReadyToStart] = useState(false);
 
   const [selectedCategoryItem, setSelectedCategoryItem] = useState(null);
 
@@ -43,6 +45,20 @@ function App() {
     setCurrentTeam(Math.floor(Math.random() * number) + 1);
     setTeamCount(number);
     setTeams(number);
+    setResults(() => {
+      const resultTable = [];
+      for (let i = 0; i < number; i++) {
+        const teamTable = {
+          team: i,
+          point: 0,
+          questions: [],
+        };
+        resultTable.push(teamTable);
+      }
+      return [...results, ...resultTable];
+    });
+
+    console.log(results);
   };
 
   const finishRound = (correct, questionItem) => {
@@ -61,30 +77,24 @@ function App() {
       prepairedData
     );
     setCurrentTeam(nextTeam);
+    setSelectedCategoryItem(null);
   };
+
+  useEffect(() => {
+    console.log(results.length > 0);
+    if (results.length > 0) {
+      setReadyToStart(true);
+    }
+  }, [results]);
 
   return (
     <div className="App">
       {!hasStarted ? (
         <>
-          {/* <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-          <h1>Hallo Welt</h1> */}
           <LandingPage
             storeNumberOfTeams={storeNumberOfTeams}
             startGame={setHasStarted}
+            readyToStart={readyToStart}
           />
         </>
       ) : (
