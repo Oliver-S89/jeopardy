@@ -89,6 +89,66 @@
           "answer": "na ich"
         }
       ]
+    },
+    {
+      "category": "Erlkönig 3",
+      "questionset": [
+        {
+          "points": 100,
+          "question": "F3.1 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 200,
+          "question": "F3.2 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 300,
+          "question": "F3.3 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 400,
+          "question": "F3.4 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 500,
+          "question": "F3.5 wer war das jetzt?",
+          "answer": "na ich"
+        }
+      ]
+    },
+    {
+      "category": "Erlkönig 4",
+      "questionset": [
+        {
+          "points": 100,
+          "question": "F3.1 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 200,
+          "question": "F3.2 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 300,
+          "question": "F3.3 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 400,
+          "question": "F3.4 wer war das jetzt?",
+          "answer": "na ich"
+        },
+        {
+          "points": 500,
+          "question": "F3.5 wer war das jetzt?",
+          "answer": "na ich"
+        }
+      ]
     }
   ]
 }

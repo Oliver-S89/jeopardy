@@ -34,11 +34,11 @@ export function QuestionWrapper(props) {
             ? props.categoryItem.question
             : "Keine Frage definiert"}
         </h1>
-        <h2>Antwort: {props?.categoryItem?.answer}</h2>
         {!answerOpened ? (
           <button onClick={() => setAnswerOpened(true)}>Lösung anzeigen</button>
         ) : (
           <>
+            <h2>Antwort: {props?.categoryItem?.answer}</h2>
             <button onClick={() => props.finishRound(true, questionItem)}>
               Richtig
             </button>
