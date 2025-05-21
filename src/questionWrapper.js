@@ -40,7 +40,7 @@ export function QuestionWrapper(props) {
             bottom: 0,
           }}
         >
-          <h1>
+          <h1 style={{ padding: "0 140px" }}>
             {props?.categoryItem
               ? props.categoryItem.question
               : "Keine Frage definiert"}
@@ -63,7 +63,9 @@ export function QuestionWrapper(props) {
             </button>
           ) : (
             <>
-              <h2>Antwort: {props?.categoryItem?.answer}</h2>
+              <h2 style={{ padding: "0 80px", marginTop: 80 }}>
+                Antwort: {props?.categoryItem?.answer}
+              </h2>
               <div
                 style={{
                   position: "fixed",

@@ -33,7 +33,7 @@ export function Scoreboard(props) {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           padding: "20px 60px",
           color: "#444444",
         }}
