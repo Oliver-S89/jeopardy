@@ -6,7 +6,6 @@ export function CategoryColumn(props) {
   const category = catItems[catItems.length - 1];
   const questionset = catItems.slice(0, -1);
 
-  // console.log("########", props.item, category, questionset);
   return (
     <div
       style={{

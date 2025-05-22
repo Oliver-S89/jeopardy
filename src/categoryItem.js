@@ -2,7 +2,6 @@ import React from "react";
 
 export function CategoryItem(props) {
   const isAnswered = props?.categoryItem?.answeredCorretly != null;
-  // console.log("category item", props.categoryItem.answeredCorretly, isAnswered);
   return (
     <div>
       {!isAnswered ? (

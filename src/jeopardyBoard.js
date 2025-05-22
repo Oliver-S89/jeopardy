@@ -47,7 +47,7 @@ export function JeopardyBoard(props) {
           Es ist Team {props.currentTeam ? props.currentTeam : 1} an der Reihe
         </div>
         <h1 style={{ margin: 0, padding: 0, color: "white" }}>
-          School of Rock
+          School of Rock and Pop
         </h1>
         <div>
           <button

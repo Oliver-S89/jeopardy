@@ -18,6 +18,7 @@ function App() {
   const [currentTeam, setCurrentTeam] = useState(0);
   const [results, setResults] = useState([]);
   const [readyToStart, setReadyToStart] = useState(false);
+  const [initialSecondsForTimer, setInitialSecondsForTimer] = useState(0);
 
   const [selectedCategoryItem, setSelectedCategoryItem] = useState(null);
 
@@ -60,8 +61,6 @@ function App() {
       }
       return [...results, ...resultTable];
     });
-
-    console.log(results);
   };
 
   const finishRound = (correct, questionItem) => {
@@ -87,7 +86,6 @@ function App() {
   };
 
   const updateResults = (team, points, correctly, question, answer) => {
-    console.log("#####", team, points, correctly, question, answer);
     const updateEntry = {
       ...results[team - 1],
       ...{
@@ -112,11 +110,10 @@ function App() {
   };
 
   useEffect(() => {
-    if (results.length > 0) {
-      console.log("RESULT TABLE", results, results.length > 0);
+    if (results.length > 0 && initialSecondsForTimer > 0) {
       setReadyToStart(true);
     }
-  }, [results]);
+  }, [results, initialSecondsForTimer]);
 
   return (
     <div className="App">
@@ -126,6 +123,8 @@ function App() {
             storeNumberOfTeams={storeNumberOfTeams}
             startGame={setHasStarted}
             readyToStart={readyToStart}
+            setInitialSecondsForTimer={setInitialSecondsForTimer}
+            initialSecondsForTimer={initialSecondsForTimer}
           />
         </>
       ) : (
@@ -144,6 +143,7 @@ function App() {
               setSelectedCategoryItem={setSelectedCategoryItem}
               finishRound={finishRound}
               currentTeam={currentTeam}
+              initialSecondsForTimer={initialSecondsForTimer}
             />
           )}
           {showScoreBoard && (

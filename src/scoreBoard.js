@@ -34,6 +34,8 @@ export function Scoreboard(props) {
         style={{
           display: "flex",
           justifyContent: "space-around",
+          alignContent: "space-around",
+          flexWrap: "wrap",
           padding: "20px 60px",
           color: "#444444",
         }}

@@ -5,6 +5,7 @@ export function QuestionWrapper(props) {
   // console.log(props);
   const [answerOpened, setAnswerOpened] = useState(false);
   const questionItem = props.categoryItem;
+  const initialSeconds = props.initialSecondsForTimer || 30;
   return (
     <>
       <div
@@ -153,7 +154,7 @@ export function QuestionWrapper(props) {
             }}
           >
             <CountdownTimer
-              initialSeconds={45}
+              initialSeconds={initialSeconds}
               onComplete={() => alert("Zeit ist abgelaufen!")}
               answerOpened={answerOpened}
             />
