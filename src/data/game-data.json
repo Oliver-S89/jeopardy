@@ -5,27 +5,27 @@
       "questionset": [
         {
           "points": 100,
-          "question": "Wann entstand die Rockmusik?",
+          "question": "<b>Wann</b> entstand die Rockmusik?",
           "answer": "Nach dem Zweiten Weltkrieg"
         },
         {
           "points": 200,
-          "question": "Wie heißt die Musikrichtung, die Rockmusik mit Blues und Boogie-Woogie verband?",
+          "question": "Wie heißt die <b>Musikrichtung</b>, die <u>Rockmusik mit Blues und Boogie-Woogie</u> verband?",
           "answer": "Rock 'n' Roll"
         },
         {
           "points": 300,
-          "question": "Welcher Sänger machte Rock durch seinen Tanzstil berühmt?",
+          "question": "Welcher Sänger machte <u>Rock durch seinen Tanzstil</u> berühmt?",
           "answer": "Elvis Presley"
         },
         {
           "points": 400,
-          "question": "In welchem Jahr veröffentlichten die Rolling Stones „(I Can’t Get No) Satisfaction“?",
+          "question": "In <u>welchem Jahr</u> veröffentlichten die Rolling Stones „(I Can’t Get No) Satisfaction“?",
           "answer": "1965"
         },
         {
           "points": 500,
-          "question": "Warum sorgte Rockmusik in den 1950ern für Empörung bei Erwachsenen?",
+          "question": "<u>Warum</u> sorgte <u>Rockmusik</u> in den 1950ern für <u>Empörung</u> bei Erwachsenen?",
           "answer": "Wegen lauter Musik, langen Haaren, rebellischem Verhalten"
         }
       ]
@@ -35,27 +35,27 @@
       "questionset": [
         {
           "points": 100,
-          "question": "Was bedeutet „Pop“ in Popmusik?",
+          "question": "Was bedeutet „<u>Pop</u>“ in Popmusik?",
           "answer": "Populär"
         },
         {
           "points": 200,
-          "question": "Wo lassen sich heute Pop-Hitlisten besonders gut finden?",
+          "question": "<u>Wo</u> lassen sich heute Pop-Hitlisten besonders gut finden?",
           "answer": "Auf Spotify"
         },
         {
           "points": 300,
-          "question": "Was ist eine Hookline?",
+          "question": "Was ist eine <u>Hookline</u>?",
           "answer": "Eine eingängige, sich wiederholende Textzeile"
         },
         {
           "points": 400,
-          "question": "Welches Ziel hat Popmusik allgemein?",
+          "question": "Welches <u>Ziel hat Popmusik</u> allgemein?",
           "answer": "Möglichst viele Menschen unterhalten"
         },
         {
           "points": 500,
-          "question": "Nenne ein typisches Stilmerkmal moderner Popmusik.",
+          "question": "Nenne ein typisches <u>Stilmerkmal moderner Popmusik</u>.",
           "answer": "Eingängige Melodien, elektronische Sounds, klare Struktur"
         }
       ]
@@ -65,27 +65,27 @@
       "questionset": [
         {
           "points": 100,
-          "question": "Welcher Musikstil entstand in der Bronx und nutzt Rap?",
+          "question": "<u>Welcher Musikstil</u> entstand in der Bronx und <u>nutzt Rap</u>?",
           "answer": "Hip-Hop"
         },
         {
           "points": 200,
-          "question": "Welcher Stil ist durch Powerchords und Headbanging bekannt?",
+          "question": "Welcher <u>Stil</u> ist durch <u>Powerchords und Headbanging</u> bekannt?",
           "answer": "Hardrock/Heavy Metal"
         },
         {
           "points": 300,
-          "question": "Welcher Musikstil steht für Protest, Rebellion und das Motto „No Future“?",
+          "question": "Welcher <u>Musikstil</u> steht für <u>Protest, Rebellion und das Motto „No Future“</u>?",
           "answer": "Punkrock"
         },
         {
           "points": 400,
-          "question": "Welcher Musikstil entstand in den 1970ern mit Keyboard-Sounds und entwickelte sich später zu Techno?",
+          "question": "Welcher <u>Musikstil</u> entstand in den <u>1970ern</u> mit <u>Keyboard-Sounds</u> und entwickelte sich später zu <u>Techno</u>?",
           "answer": "Elektronische Musik"
         },
         {
           "points": 500,
-          "question": "Welche Gemeinsamkeit haben Reggae und Hip-Hop in Bezug auf ihre Funktion?",
+          "question": "Welche <u>Gemeinsamkeit haben Reggae und Hip-Hop</u> in Bezug auf ihre <u>Funktion</u>?",
           "answer": "Beide drücken gesellschaftliche Themen oder Kritik aus"
         }
       ]
@@ -95,27 +95,27 @@
       "questionset": [
         {
           "points": 100,
-          "question": "Welche Band gewann 1974 den ESC mit „Waterloo“?",
+          "question": "Welche <u>Band</u> gewann 1974 den <u>ESC mit „Waterloo“</u>?",
           "answer": "ABBA"
         },
         {
           "points": 200,
-          "question": "Wer ist bekannt für das Lied „Thriller“?",
+          "question": "<u>Wer</u> ist bekannt für das <u>Lied „Thriller“</u>?",
           "answer": "Michael Jackson"
         },
         {
           "points": 300,
-          "question": "Welche Band wurde durch ihr Lied „Alles nur geklaut“ bekannt?",
+          "question": "<u>Welche Band</u> wurde durch ihr Lied „Alles nur geklaut“ bekannt?",
           "answer": "Die Prinzen"
         },
         {
           "points": 400,
-          "question": "Welche Band wurde durch die „Beatlemania“ weltweit bekannt?",
+          "question": "<u>Welche Band</u> wurde durch die „Beatlemania“ weltweit bekannt?",
           "answer": "The Beatles"
         },
         {
           "points": 500,
-          "question": "Welche Band wurde 1962 gegründet, galt als „Anti-Beatles“ und ist für rebellisches Auftreten bekannt?",
+          "question": "<u>Welche Band</u> wurde 1962 gegründet, galt als „Anti-Beatles“ und ist für rebellisches Auftreten bekannt?",
           "answer": "Rolling Stones"
         }
       ]
@@ -125,27 +125,27 @@
       "questionset": [
         {
           "points": 100,
-          "question": "Welches Instrument wurde in der Rockmusik elektrisch verstärkt?",
+          "question": "<u>Welches Instrument</u> wurde in der Rockmusik <u>elektrisch verstärkt</u>?",
           "answer": "E-Gitarre"
         },
         {
           "points": 200,
-          "question": "Wie nennt man ein kurzes, prägnantes Gitarrenmotiv, z. B. bei „Satisfaction“?",
+          "question": "<u>Wie</u> nennt man ein kurzes, <u>prägnantes Gitarrenmotiv</u>, z. B. bei „Satisfaction“?",
           "answer": "Gitarrenriff"
         },
         {
           "points": 300,
-          "question": "Welches Gerät nutzten Hip-Hop-Künstler in den 1970ern für laute Beats auf der Straße?",
+          "question": "<u>Welches Gerät</u> nutzten <u>Hip-Hop-Künstler</u> in den 1970ern für laute Beats auf der Straße?",
           "answer": "Ghettoblaster"
         },
         {
           "points": 400,
-          "question": "Wie nennt man Musikgeräte, die man in den 50er-/60er-Jahren mitnehmen konnte?",
+          "question": "Wie nennt man <u>Musikgeräte</u>, die man in den <u>50er-/60er-Jahren mitnehmen</u> konnte?",
           "answer": "Tragbare Musikgeräte"
         },
         {
           "points": 500,
-          "question": "Welches Merkmal ist typisch für Techno-Musik?",
+          "question": "Welches <u>Merkmal</u> ist typisch für <u>Techno-Musik</u>?",
           "answer": "Schnelle 4/4-Takte, wiederholende Loops, tiefe Frequenzen (Infraschall)"
         }
       ]

@@ -41,11 +41,14 @@ export function QuestionWrapper(props) {
             bottom: 0,
           }}
         >
-          <h1 style={{ padding: "0 140px" }}>
-            {props?.categoryItem
-              ? props.categoryItem.question
-              : "Keine Frage definiert"}
-          </h1>
+          <h1
+            style={{ padding: "100px 140px", fontWeight: "normal" }}
+            dangerouslySetInnerHTML={{
+              __html: props?.categoryItem
+                ? props.categoryItem.question
+                : "Keine Frage definiert",
+            }}
+          />
           {!answerOpened ? (
             <button
               style={{
